@@ -45,12 +45,6 @@ This format is **tidy / long** and easy to use with:
 
 ---
 
-Yes — great call. Since you’re explicitly **not using the command line** and did everything via **IDLE**, the README should reflect *that exact workflow* so others don’t get confused.
-
-Here’s a **simplified, IDLE-first version** you can drop straight into your README.
-
----
-
 ## 🧰 Requirements (IDLE / No Command Line)
 
 ### 1️⃣ Install Python
