@@ -1,47 +1,21 @@
 # NIH RePORTER Similar Projects & Publications Scraper
 
-This script scrapes **NIH RePORTER** to:
+## What this tool does
 
-- Start from a **seed NIH project**
-- Collect its **Similar Projects** (ranked by Match Score)
-- For each similar project, collect **associated publications**
-- Output a **tidy, long-format CSV** suitable for analysis in **R / Python**
+This repository contains a single Python script with **two modes**:
 
-Each row in the final CSV represents:
+### Mode 1 — NIH RePORTER scraper (Similar Projects + Publications → CSV)
+- Start from a **seed NIH RePORTER project URL**
+- Scrape the **Similar Projects** table (sorted by Match Score)
+- For each similar project, scrape the **Publications** table
+- Output a tidy, long-format CSV: `similar_projects_long.csv`
 
-> **(one similar project × one publication)**  
-> Projects without publications are still included with blank publication fields.
-
----
-
-## 📄 Output Format
-
-The script produces a single CSV:
-
-**`similar_projects_long.csv`**
-
-With columns:
-
-seed_appl_id  
-similar_appl_id  
-project_url  
-Match Score  
-Project Title  
-Project Number  
-Admin IC  
-FY Total Cost by IC  
-Fiscal Year  
-Funding IC  
-Organization  
-Principal Investigator(s)/Project Leader(s)  
-pub_title  
-pub_year  
-pub_url
-
-This format is **tidy / long** and easy to use with:
-
-- `dplyr::group_by()`, `left_join()`, etc. in R
-- pandas in Python
+### Mode 2 — Bibliography export (PMIDs in a CSV → MEDLINE / RIS / BibTeX)
+- Provide a **local .csv file** that contains a PMID column (auto-detected)
+- Export citations in:
+  - **MEDLINE** (`pubmed_medline.txt`) — best for EndNote bulk import
+  - **RIS** (`pubmed.ris`) — universal format (Zotero/Mendeley/EndNote)
+  - **BibTeX** (`pubmed.bib`) — good for LaTeX workflows
 
 ---
 
