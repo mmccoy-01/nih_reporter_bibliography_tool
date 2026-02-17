@@ -1,4 +1,4 @@
-# NIH RePORTER Similar Projects & Publications Scraper
+# NIH RePORTER & PubMed Bibliography Pipeline
 
 ## What this tool does
 
