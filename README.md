@@ -69,7 +69,7 @@ You should see download progress — this only needs to be done **once**.
 From the directory containing the script:
 
 ```bash
-python nih_similar_and_pubs.py
+nih_reporter_bibliography_tool.py
 ```
 
 The script will:
